@@ -1,0 +1,5 @@
+alloca
+bitcast
+= getelementptr
+memcpy
+strcpy

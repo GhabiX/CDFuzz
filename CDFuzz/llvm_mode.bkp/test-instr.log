@@ -1,0 +1,21 @@
+[DEBUG] GVSet @.str = private unnamed_addr constant [6 x i8] c"Hum?\0A\00", align 1
+[DEBUG] GVSet @.str.1 = private unnamed_addr constant [26 x i8] c"Looks like a zero to me!\0A\00", align 1
+[DEBUG] GVSet @.str.2 = private unnamed_addr constant [31 x i8] c"A non-zero value? How quaint!\0A\00", align 1
+icmp:48,31305,18205,22983
+; <label>:22:                                     ; preds = %2
+  %23 = load i32, i32* @__afl_prev_loc, !dbg !33, !nosanitize !2
+  %24 = load i8*, i8** @__afl_area_ptr, !dbg !33, !nosanitize !2
+  %25 = xor i32 %23, 18205, !dbg !33
+  %26 = getelementptr i8, i8* %24, i32 %25, !dbg !33
+  %27 = load i8, i8* %26, !dbg !33, !nosanitize !2
+  %28 = add i8 %27, 1, !dbg !33
+  store i8 %28, i8* %26, !dbg !33, !nosanitize !2
+  store i32 9102, i32* @__afl_prev_loc, !dbg !33, !nosanitize !2
+  %29 = getelementptr inbounds [8 x i8], [8 x i8]* %9, i64 0, i64 0, !dbg !33
+  %30 = load i8, i8* %29, align 1, !dbg !33, !tbaa !35
+  %31 = sext i8 %30 to i32, !dbg !33
+  %32 = icmp eq i32 %31, 48, !dbg !38
+  br i1 %32, label %33, label %41, !dbg !39
+
+[bbID]: 18205
+

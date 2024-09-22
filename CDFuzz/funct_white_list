@@ -1,0 +1,6 @@
+strcmp
+memcmp
+strstr
+strncmp
+strcasecmp
+strncasecmp

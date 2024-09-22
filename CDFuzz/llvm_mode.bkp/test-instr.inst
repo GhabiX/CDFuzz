@@ -1,0 +1,101 @@
+
+  %3 = load i32, i32* @__afl_prev_loc, !nosanitize !2
+  %4 = load i8*, i8** @__afl_area_ptr, !nosanitize !2
+  %5 = xor i32 %3, 2850
+  %6 = getelementptr i8, i8* %4, i32 %5
+  %7 = load i8, i8* %6, !nosanitize !2
+  %8 = add i8 %7, 1
+  store i8 %8, i8* %6, !nosanitize !2
+  store i32 1425, i32* @__afl_prev_loc, !nosanitize !2
+  %9 = alloca [8 x i8], align 1
+  call void @llvm.dbg.value(metadata i32 %0, metadata !15, metadata !DIExpression()), !dbg !21
+  call void @llvm.dbg.value(metadata i8** %1, metadata !16, metadata !DIExpression()), !dbg !22
+  %10 = bitcast [8 x i8]* %9 to i8*, !dbg !23
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* %10) #5, !dbg !23
+  call void @llvm.dbg.declare(metadata [8 x i8]* %9, metadata !17, metadata !DIExpression()), !dbg !24
+  %11 = getelementptr inbounds [8 x i8], [8 x i8]* %9, i32 0, i32 0, !dbg !25
+  %12 = call i64 @read(i32 0, i8* %11, i64 8), !dbg !27
+  %13 = icmp slt i64 %12, 1, !dbg !28
+  br i1 %13, label %14, label %22, !dbg !29
+
+[bbID]: 2850
+
+
+; <label>:14:                                     ; preds = %2
+  %15 = load i32, i32* @__afl_prev_loc, !dbg !30, !nosanitize !2
+  %16 = load i8*, i8** @__afl_area_ptr, !dbg !30, !nosanitize !2
+  %17 = xor i32 %15, 59074, !dbg !30
+  %18 = getelementptr i8, i8* %16, i32 %17, !dbg !30
+  %19 = load i8, i8* %18, !dbg !30, !nosanitize !2
+  %20 = add i8 %19, 1, !dbg !30
+  store i8 %20, i8* %18, !dbg !30, !nosanitize !2
+  store i32 29537, i32* @__afl_prev_loc, !dbg !30, !nosanitize !2
+  %21 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str, i32 0, i32 0)), !dbg !30
+  call void @exit(i32 1) #6, !dbg !32
+  unreachable, !dbg !32
+
+[bbID]: 59074
+
+
+; <label>:22:                                     ; preds = %2
+  %23 = load i32, i32* @__afl_prev_loc, !dbg !33, !nosanitize !2
+  %24 = load i8*, i8** @__afl_area_ptr, !dbg !33, !nosanitize !2
+  %25 = xor i32 %23, 18205, !dbg !33
+  %26 = getelementptr i8, i8* %24, i32 %25, !dbg !33
+  %27 = load i8, i8* %26, !dbg !33, !nosanitize !2
+  %28 = add i8 %27, 1, !dbg !33
+  store i8 %28, i8* %26, !dbg !33, !nosanitize !2
+  store i32 9102, i32* @__afl_prev_loc, !dbg !33, !nosanitize !2
+  %29 = getelementptr inbounds [8 x i8], [8 x i8]* %9, i64 0, i64 0, !dbg !33
+  %30 = load i8, i8* %29, align 1, !dbg !33, !tbaa !35
+  %31 = sext i8 %30 to i32, !dbg !33
+  %32 = icmp eq i32 %31, 48, !dbg !38
+  br i1 %32, label %33, label %41, !dbg !39
+
+[bbID]: 18205
+
+
+; <label>:33:                                     ; preds = %22
+  %34 = load i32, i32* @__afl_prev_loc, !dbg !40, !nosanitize !2
+  %35 = load i8*, i8** @__afl_area_ptr, !dbg !40, !nosanitize !2
+  %36 = xor i32 %34, 38439, !dbg !40
+  %37 = getelementptr i8, i8* %35, i32 %36, !dbg !40
+  %38 = load i8, i8* %37, !dbg !40, !nosanitize !2
+  %39 = add i8 %38, 1, !dbg !40
+  store i8 %39, i8* %37, !dbg !40, !nosanitize !2
+  store i32 19219, i32* @__afl_prev_loc, !dbg !40, !nosanitize !2
+  %40 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.1, i32 0, i32 0)), !dbg !40
+  br label %49, !dbg !40
+
+[bbID]: 38439
+
+
+; <label>:41:                                     ; preds = %22
+  %42 = load i32, i32* @__afl_prev_loc, !dbg !41, !nosanitize !2
+  %43 = load i8*, i8** @__afl_area_ptr, !dbg !41, !nosanitize !2
+  %44 = xor i32 %42, 22983, !dbg !41
+  %45 = getelementptr i8, i8* %43, i32 %44, !dbg !41
+  %46 = load i8, i8* %45, !dbg !41, !nosanitize !2
+  %47 = add i8 %46, 1, !dbg !41
+  store i8 %47, i8* %45, !dbg !41, !nosanitize !2
+  store i32 11491, i32* @__afl_prev_loc, !dbg !41, !nosanitize !2
+  %48 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([31 x i8], [31 x i8]* @.str.2, i32 0, i32 0)), !dbg !41
+  br label %49
+
+[bbID]: 22983
+
+
+; <label>:49:                                     ; preds = %41, %33
+  %50 = load i32, i32* @__afl_prev_loc, !dbg !42, !nosanitize !2
+  %51 = load i8*, i8** @__afl_area_ptr, !dbg !42, !nosanitize !2
+  %52 = xor i32 %50, 65369, !dbg !42
+  %53 = getelementptr i8, i8* %51, i32 %52, !dbg !42
+  %54 = load i8, i8* %53, !dbg !42, !nosanitize !2
+  %55 = add i8 %54, 1, !dbg !42
+  store i8 %55, i8* %53, !dbg !42, !nosanitize !2
+  store i32 32684, i32* @__afl_prev_loc, !dbg !42, !nosanitize !2
+  call void @exit(i32 0) #6, !dbg !42
+  unreachable, !dbg !42
+
+[bbID]: 65369
+
